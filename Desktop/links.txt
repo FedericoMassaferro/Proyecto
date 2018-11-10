@@ -1,0 +1,4 @@
+https://programacion.net/articulo/localizador_de_direcciones_con_google_maps_mediante_php_2013
+https://developers.google.com/maps/documentation/javascript/mysql-to-maps
+http://programaenlinea.net/google-maps-php-mysql-parte-1/
+https://marianojmuzasweb.link/view?google-maps&id=65

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="939c09a4-27a4-4896-b51d-428be3eae80f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     hoja_analisis.`id_hoja` AS hoja_analisis_id_hoja,
+     hoja_analisis.`paciente` AS hoja_analisis_paciente,
+     hoja_analisis.`analisis` AS hoja_analisis_analisis,
+     hoja_analisis.`medico` AS hoja_analisis_medico,
+     hoja_analisis.`clave` AS hoja_analisis_clave,
+     datos_estudio.`id` AS datos_estudio_id,
+     datos_estudio.`area` AS datos_estudio_area,
+     datos_estudio.`categoria` AS datos_estudio_categoria,
+     datos_estudio.`datos` AS datos_estudio_datos,
+     datos_estudio.`fecha` AS datos_estudio_fecha
+FROM
+     `hoja_analisis` hoja_analisis,
+     `datos_estudio` datos_estudio]]>
+	</queryString>
+	<field name="hoja_analisis_paciente" class="java.lang.String"/>
+	<field name="hoja_analisis_analisis" class="java.lang.String"/>
+	<field name="hoja_analisis_medico" class="java.lang.String"/>
+	<field name="datos_estudio_id" class="java.lang.Integer"/>
+	<field name="datos_estudio_area" class="java.lang.Integer"/>
+	<field name="datos_estudio_categoria" class="java.lang.String"/>
+	<field name="datos_estudio_datos" class="java.lang.Double"/>
+	<field name="datos_estudio_fecha" class="java.sql.Date"/>
+	<field name="hoja_analisis_clave" class="java.lang.Integer"/>
+	<field name="hoja_analisis_id_hoja" class="java.lang.Integer"/>
+	<group name="hoja_analisis_paciente">
+		<groupExpression><![CDATA[$F{hoja_analisis_paciente}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<frame>
+					<reportElement mode="Opaque" x="-21" y="7" width="843" height="24" forecolor="#B89F7D" backcolor="#F2EBDF" uuid="2dae5b9c-01af-4351-bacf-166e90e76a6d"/>
+					<rectangle>
+						<reportElement mode="Opaque" x="21" y="0" width="36" height="24" backcolor="#736343" uuid="d7544633-3915-4d9f-bfe7-faf0d2ec72a2"/>
+						<graphicElement>
+							<pen lineWidth="0.0"/>
+						</graphicElement>
+					</rectangle>
+					<textField>
+						<reportElement style="SubTitle" x="68" y="0" width="755" height="24" forecolor="#736343" uuid="1782ba89-ceb6-45f5-bbcf-50877b247e19"/>
+						<textElement>
+							<font isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[Paciente a atender]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="164" height="126" uuid="0a63fc3a-3411-4949-b5d6-71ab57d6dcb2"/>
+				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="78505154-1cad-4ef2-a1d7-9379289172c3"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="4e5be978-4e28-4ee3-a02d-975e55c6fe1e"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee SubTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="94" width="383" height="42" uuid="0fa4e6dc-394c-4510-8822-04fee2fb4436"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="633" y="-73" width="219" height="209" uuid="098372cf-6ce6-421c-86ee-da384fb78378"/>
+				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="c332c5f0-a03a-4faa-969a-ac3f4a6dca2d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="89" height="15" forecolor="#736343" uuid="60aa14f6-d92a-4eac-8865-34658da12504"/>
+				<text><![CDATA[Num. Analisis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="89" y="0" width="89" height="15" forecolor="#736343" uuid="bde045c2-58af-46f0-8845-4865f9d87b9a"/>
+				<text><![CDATA[Medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="178" y="0" width="89" height="15" forecolor="#736343" uuid="6d5a8a67-9e43-4da7-893d-f9fae9b82bbc"/>
+				<text><![CDATA[Id Estudio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="267" y="0" width="89" height="15" forecolor="#736343" uuid="960ea343-ad5a-4712-9eb2-8fb7e3fdb00b"/>
+				<text><![CDATA[Seccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="356" y="0" width="89" height="15" forecolor="#736343" uuid="ce1b47de-0b4d-4df6-97b5-7957dcbeaf67"/>
+				<text><![CDATA[Categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="445" y="0" width="89" height="15" forecolor="#736343" uuid="569aa59c-f28c-4061-911f-791d60a0ad86"/>
+				<text><![CDATA[Valores]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="534" y="0" width="89" height="15" forecolor="#736343" uuid="f75a8e65-a13a-45ac-b831-b66ec469a200"/>
+				<text><![CDATA[Dia de Analisis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="623" y="0" width="89" height="15" forecolor="#736343" uuid="79d29ff8-b34e-4832-92e2-b2f008644c50"/>
+				<text><![CDATA[Clave de la hoja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="712" y="0" width="89" height="15" forecolor="#736343" uuid="441e7f8e-b542-426a-b66d-8502cdb518c0"/>
+				<text><![CDATA[Num Hoja]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="d5a8ed1d-5a24-4877-bd21-5f1978ac2fa0"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="89" height="15" uuid="6015af38-a643-4b0b-bee5-c7d7a7193279"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_analisis}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="89" y="0" width="89" height="15" uuid="98f818b2-2cc8-43ea-a85f-a365795e2ac8"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_medico}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="178" y="0" width="89" height="15" uuid="c861af48-88ce-4e83-9674-86076b199393"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="267" y="0" width="89" height="15" uuid="773bab50-77c8-45f9-9c48-d3f6e31506c2"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_area}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="356" y="0" width="89" height="15" uuid="925c6796-c1da-4b43-aab0-2919a680f9b3"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_categoria}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="445" y="0" width="89" height="15" uuid="9dcc8625-ec3b-453a-9b62-f91b1321a804"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_datos}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="534" y="0" width="89" height="15" uuid="36656853-7fb8-443e-84b3-f5633a32f1e1"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_fecha}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="623" y="0" width="89" height="15" uuid="63dcae19-962d-43a4-aa31-71c4324647ba"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_clave}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="712" y="0" width="89" height="15" uuid="35fbcda5-4791-494c-acaa-5f0a62eefb3c"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_id_hoja}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="dfa5b331-2f69-44eb-946e-0dfffd1799ef"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="a55238bc-b717-4f64-9c74-2261e12c553f"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="54db05df-81bc-4b81-908c-98aaf3e2badd"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="cd06127a-cc0b-48d9-b515-2e786d8efe17"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="ce428a33-672e-4567-beca-2e7cbe327fb4"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

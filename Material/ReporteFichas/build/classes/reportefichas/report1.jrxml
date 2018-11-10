@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1.jrxml" language="groovy" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0666892d-2447-4bb2-8209-51cadee3fe07">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<subDataset name="dataset1" uuid="9bf97786-3d0c-483e-a6e5-ef443f7360d3"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="94">
+				<textField>
+					<reportElement style="SubTitle" x="36" y="9" width="506" height="24" forecolor="#006600" uuid="76672eb2-9ba3-449b-b9fd-1a801811b78a"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["GroupField"]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="-17" y="50" width="695" height="32" uuid="dbc8f64d-14f7-426a-9b0a-b53f7467337e"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="100"/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+		<groupHeader>
+			<band height="101">
+				<textField>
+					<reportElement style="SubTitle" x="0" y="4" width="460" height="20" uuid="8ba94961-dc9b-4337-99f2-9a1b92b4bc22"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["GroupField"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" mode="Opaque" x="170" y="-16" width="229" height="16" forecolor="#000000" uuid="4846dd67-570d-42f2-a19d-092076df1b78"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Ficha de resultados: Analisis de sangre]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="-16" width="75" height="50" uuid="c37b95a9-04c7-45e3-8374-47a21a6a9b10"/>
+				<imageExpression><![CDATA["C:\\Users\\localuser\\Desktop\\Material\\logo verde.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="85" y="0" width="645" height="34" uuid="68ad2965-dd27-4e23-8b3f-57f78b3f20ae"/>
+			</rectangle>
+			<line>
+				<reportElement x="85" y="17" width="645" height="1" uuid="6883944a-8818-4749-b5a5-9e3d77883dff"/>
+			</line>
+			<textField>
+				<reportElement x="87" y="2" width="69" height="15" uuid="5b1d48c2-e875-4b28-a1a0-c9a3616e7431"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Paciente:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="19" width="110" height="15" uuid="231ab983-a285-4a59-9b12-12f59fd3281c"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Ordenado por:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="2" width="196" height="15" uuid="bcde4576-e7b4-4dcc-a676-3c7e94517200"/>
+			</textField>
+			<textField>
+				<reportElement x="202" y="19" width="197" height="15" uuid="23b0fd79-fb1b-48f8-9577-9b24ad02a43c"/>
+			</textField>
+			<textField>
+				<reportElement x="416" y="2" width="44" height="15" uuid="afe57407-1a76-4852-8ca6-f5d2ea1f9ece"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Clave:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="19" width="57" height="15" uuid="ef442835-6cd5-40ec-b908-83e5d0f19674"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Fecha:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="602" y="2" width="44" height="15" uuid="fc1b4fc9-2df6-4b06-92d0-3b8d32039c39"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Hora:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="603" y="19" width="44" height="15" uuid="8bb75035-7bf5-4029-b5e1-c24b5deff666"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Edad:]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="85624979-e99c-466e-8869-7b607614cfd4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="33ddf7eb-ebf6-4f09-b6d3-07abccc75324"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="8758f106-8ff0-49dd-8d18-b80c1eef82ea"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="71" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="04e76f9b-3e74-48e0-8db8-0db6aae41bfb"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

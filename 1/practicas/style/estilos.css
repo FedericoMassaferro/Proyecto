@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+  padding: 0px;
+  margin: 0px;
+}
+.logofondo{
+  background: white;
+  border-radius: 35px;
+}
+.logo{
+  display: inline-block;
+  position: relative;
+  left: 5%;
+  top: 12px;
+  margin-right: 5%;
+}
+.datos{
+  display: inline-block;
+  margin-left: 8%;
+  position: relative;
+  bottom: 40px;
+}
+@media screen and (max-width: 905px) {
+  #datos2{
+    display: inline-block;
+    margin-left: 35%;
+  }
+}
+.datos h4{
+  color: #97A09E;
+}
+.datos h5{
+  color: #B6C5C2;
+}
+.nav{
+  position: relative;
+  left: 5%;
+}
+nav ul li a h4{
+  color: #11B2E0;
+}
+nav a{
+
+	text-decoration:none;
+}
+nav li{
+	display:inline-block;
+  padding:0px 25px;
+	font-size:20px;
+}
+.entrada{
+  height: 550px;
+  width: 100%;
+  margin-bottom: -50px;
+  background: url(../img/entrada-hospital-hc.jpg) no-repeat fixed 50%;
+}
+.distancia{
+  margin-left: 2%;
+}
+.distancia2{
+  margin-left: 25%;
+}
+.contendora{
+  background: white;
+box-shadow:0 5px 5px 3px rgba(0, 0, 0, 0.25);
+padding: 10px;
+padding-left: 0px;
+padding-right: 0px;
+text-align: center;
+width: 20%;
+display: inline-block;
+margin: 3%;
+position: relative;
+left: 10%;
+}
+.blanco{
+  background: white;
+  margin: 0px;
+  padding: 5px;
+  padding-bottom: 50px;
+}
+.text p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
+.text h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+@media screen and (max-width: 787px) {
+  .text p {
+    font-size: 0.8em;
+  }
+}
+.imgcont{
+  width: 30%;
+}
+.ver_todas{
+  background-color: #3498db;
+    border: 2px solid #3498db;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    left: 46%;
+    text-decoration: none;
+}
+.fondoazul{
+  background: url(../img/instalaciones.png) no-repeat fixed 90%/cover;
+display: table;
+height: 300px;
+width: 100%;
+}
+.fondoazul h2, .fondoazul2 h2{
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+.fondoazul2 h2{
+  margin-top: 50px;
+}
+.fondoazul h2{
+  margin-top: 120px;
+}
+.contendora2{
+  background: white;
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  margin: 3%;
+  position: relative;
+  left: 10%;
+}
+#wowslider-container1{
+  display: inline-block;
+  width: 30%;
+  margin: 0px;
+}
+.fondoazul2{
+  background: url(../img/mundo.jpg) no-repeat fixed 1%/cover;
+display: table;
+height: 150px;
+width: 100%;
+}
+.Ubicacion iframe{
+  width: 80%;
+  margin-left: 10%;
+}

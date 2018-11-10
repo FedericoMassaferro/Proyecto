@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+.formulario{
+  width: 500px;
+  background: rgba(31, 213, 164 ) ;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+  border-radius: 5%;
+}
+.formulario_titulo{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.formulario_input, .formulario_label, .formulario_submit{
+  display: block;
+  width: 100%;
+  font-size: 1.1em;
+
+}
+.formulario_input{
+  padding: 15px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 1px solid black;
+  z-index: 2;
+
+  }
+.formulario_label{
+  padding-left: 15px;
+  position: relative;
+  margin-top: -78px;
+  transition: all;
+  padding-bottom: 70px;
+  z-index: 1;
+}
+.formulario_submit{
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+.formulario_input:focus{
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+.formulario_input:focus + .formulario_label{
+  margin-top: -120px;
+}
+.mantener{
+  margin-top: -120px;
+}
+
+.tab {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  position: relative;
+  left: 12%;
+  margin-right: 15px;
+
+}
+
+.tab:hover {
+  background: #0E6850;
+}
+p{
+
+    display: inline-block;
+}
+.pedidoimg{
+  position: absolute;
+  left: 30%;
+  top: 30%;
+}
+.adm{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+.x{
+      position: relative;
+      left: 96%;
+      bottom: 135px;
+      width: 50px;
+      z-index: 1;
+}
+.xadm{
+      position: absolute;
+      left: 88%;
+      bottom: 90%;
+      width: 50px;
+      z-index: 1;
+}
+
+textarea{
+  width: 100%;
+  height: 20%;
+
+
+}
+.area_label{
+
+    font-size: 1.1em;
+}
+.textarea{
+  height: 100px;
+}

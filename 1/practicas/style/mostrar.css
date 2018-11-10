@@ -1,0 +1,39 @@
+table{
+  border-collapse: collapse;
+  width: 80%;
+  position: relative;
+  left: 10%;
+
+}
+th, td{
+  text-align: left;
+  padding: 8px;
+  color: white;
+}
+tr{
+  background: rgba(11, 12, 12,0.7);
+}
+tr:nth-child(even){
+  background: rgba(152, 154, 162,0.5);
+}
+
+.lista{
+  font-size: 25px;
+  text-align: center;
+}
+.cup_{
+  width: 80%;
+}
+.Prepagas{
+  position: relative;
+  left: 8%;
+}
+.eliminar{
+  color: red;
+}
+.modificarblue{
+  color: blue;
+}
+.transparent{
+  background: transparent;
+}

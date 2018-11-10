@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Leaflet GeoLocation Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/uikit.almost-flat.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="uk-container uk-margin-top">
+  <div class="uk-grid">
+    <div class="uk-width-1-1">
+      <div class="uk-panel uk-panel-box uk-panel-box-secondary uk-panel-header">
+        <h3 class="uk-panel-title">Leaflet Geolocation Simple</h3>
+        <div id="map"></div> 
+        <button id="locate-position" class="uk-button uk-button-success"><i class="uk-icon-map-marker"></i></button>
+        
+        <button class="uk-button" data-uk-modal="{target:'#nodal'}">Show modal</button>
+        <!-- This is the modal -->
+        <div id="modal" class="uk-modal">
+            <div class="uk-modal-dialog">
+                <a class="uk-modal-close uk-close"></a>
+                Modal Title
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/js/uikit.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

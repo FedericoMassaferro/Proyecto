@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1000" pageHeight="595" orientation="Landscape" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7e54fcd8-6f70-4ce8-902a-0c874b0dc256">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     hoja_analisis.`id_hoja` AS hoja_analisis_id_hoja,
+     hoja_analisis.`paciente` AS hoja_analisis_paciente,
+     hoja_analisis.`analisis` AS hoja_analisis_analisis,
+     hoja_analisis.`medico` AS hoja_analisis_medico,
+     hoja_analisis.`clave` AS hoja_analisis_clave,
+     datos_estudio.`id` AS datos_estudio_id,
+     datos_estudio.`area` AS datos_estudio_area,
+     datos_estudio.`categoria` AS datos_estudio_categoria,
+     datos_estudio.`datos` AS datos_estudio_datos,
+     datos_estudio.`fecha` AS datos_estudio_fecha,
+     laboratorio.`id` AS laboratorio_id,
+     laboratorio.`paciente` AS laboratorio_paciente,
+     laboratorio.`tipo_estudio` AS laboratorio_tipo_estudio,
+     laboratorio.`area` AS laboratorio_area,
+     laboratorio.`fecha` AS laboratorio_fecha,
+     paciente.`dni` AS paciente_dni,
+     paciente.`nombre` AS paciente_nombre,
+     paciente.`apellido` AS paciente_apellido,
+     paciente.`edad` AS paciente_edad,
+     paciente.`sexo` AS paciente_sexo
+FROM
+     `hoja_analisis` hoja_analisis,
+     `datos_estudio` datos_estudio,
+     `laboratorio` laboratorio,
+     `paciente` paciente]]>
+	</queryString>
+	<field name="hoja_analisis_id_hoja" class="java.lang.Integer"/>
+	<field name="hoja_analisis_paciente" class="java.lang.String"/>
+	<field name="hoja_analisis_analisis" class="java.lang.String"/>
+	<field name="hoja_analisis_medico" class="java.lang.String"/>
+	<field name="hoja_analisis_clave" class="java.lang.Integer"/>
+	<field name="datos_estudio_id" class="java.lang.Integer"/>
+	<field name="datos_estudio_area" class="java.lang.Integer"/>
+	<field name="datos_estudio_categoria" class="java.lang.String"/>
+	<field name="datos_estudio_datos" class="java.lang.Double"/>
+	<field name="datos_estudio_fecha" class="java.sql.Date"/>
+	<field name="laboratorio_id" class="java.lang.Integer"/>
+	<field name="laboratorio_paciente" class="java.lang.Integer"/>
+	<field name="laboratorio_tipo_estudio" class="java.lang.String"/>
+	<field name="laboratorio_area" class="java.lang.String"/>
+	<field name="laboratorio_fecha" class="java.sql.Date"/>
+	<field name="paciente_dni" class="java.lang.Integer"/>
+	<field name="paciente_nombre" class="java.lang.String"/>
+	<field name="paciente_apellido" class="java.lang.String"/>
+	<field name="paciente_edad" class="java.lang.Integer"/>
+	<field name="paciente_sexo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="164" height="126" uuid="b2915fdf-24a6-4aa1-9685-9793bac51739"/>
+				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="0cac8fcc-83a6-4fe8-8d0e-376678b00e29"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="376f84df-accc-4aba-be78-071dcd31cb7b"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee SubTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="94" width="383" height="42" uuid="1cc70ed1-0c3e-441d-b93f-0ee5036013a0"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="633" y="-73" width="219" height="209" uuid="9b4316fa-6f2c-4767-bed1-da3b9db95cd1"/>
+				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="055d7098-f46e-424e-ba74-2da6eaf56eb7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="40" height="15" forecolor="#736343" uuid="3f5a55cf-2faf-449d-a2fd-d2c78ebcd128"/>
+				<text><![CDATA[hoja_analisis_id_hoja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="40" y="0" width="40" height="15" forecolor="#736343" uuid="a7825f90-156c-48a8-86d4-c2d11a71bf89"/>
+				<text><![CDATA[hoja_analisis_paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="80" y="0" width="40" height="15" forecolor="#736343" uuid="4ffb1e9a-36e6-4ab9-930d-29999845498e"/>
+				<text><![CDATA[hoja_analisis_analisis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="120" y="0" width="40" height="15" forecolor="#736343" uuid="51d31e5f-93f1-47d4-a328-88c492ad5b7a"/>
+				<text><![CDATA[hoja_analisis_medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="160" y="0" width="40" height="15" forecolor="#736343" uuid="00ceee00-5f0f-4aac-83f5-1613b7575e9f"/>
+				<text><![CDATA[hoja_analisis_clave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="200" y="0" width="40" height="15" forecolor="#736343" uuid="661aa0ac-90ee-4f51-b50d-27d717643c2d"/>
+				<text><![CDATA[datos_estudio_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="240" y="0" width="40" height="15" forecolor="#736343" uuid="4e5fad87-3dc2-4c3e-837e-9277e6e1c4cc"/>
+				<text><![CDATA[datos_estudio_area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="280" y="0" width="40" height="15" forecolor="#736343" uuid="798c22fa-e4c1-4494-a0a4-6885893df1fe"/>
+				<text><![CDATA[datos_estudio_categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="320" y="0" width="40" height="15" forecolor="#736343" uuid="53b13c03-e357-42ee-b4dd-74000f4c13eb"/>
+				<text><![CDATA[datos_estudio_datos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="360" y="0" width="40" height="15" forecolor="#736343" uuid="379f6551-55d3-47e1-a93f-5f93f06bef40"/>
+				<text><![CDATA[datos_estudio_fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="0" width="40" height="15" forecolor="#736343" uuid="0ce671f4-e40b-402d-ae1b-f3c00ca98bb6"/>
+				<text><![CDATA[laboratorio_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="440" y="0" width="40" height="15" forecolor="#736343" uuid="6a7f93dc-1ac2-4d6a-802f-6c3e7a67f4ae"/>
+				<text><![CDATA[laboratorio_paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="0" width="40" height="15" forecolor="#736343" uuid="7610fb34-9a61-4cf4-a4a3-4148b073f14d"/>
+				<text><![CDATA[laboratorio_tipo_estudio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="520" y="0" width="40" height="15" forecolor="#736343" uuid="8de1e371-3ec4-4401-ac9f-38f6c89808b6"/>
+				<text><![CDATA[laboratorio_area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="560" y="0" width="40" height="15" forecolor="#736343" uuid="2d33abef-2ba7-41f9-97fb-35748f08f922"/>
+				<text><![CDATA[laboratorio_fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="600" y="0" width="40" height="15" forecolor="#736343" uuid="51b915bd-0766-4664-b562-416488878637"/>
+				<text><![CDATA[paciente_dni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="640" y="0" width="40" height="15" forecolor="#736343" uuid="237aa155-fda1-4127-ac7b-3f8fe8789f21"/>
+				<text><![CDATA[paciente_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="680" y="0" width="40" height="15" forecolor="#736343" uuid="df5d125a-39a7-4ea9-8416-177ccd14a593"/>
+				<text><![CDATA[paciente_apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="720" y="0" width="40" height="15" forecolor="#736343" uuid="aa8cf82b-ac7b-447f-b50b-eaea73a75be5"/>
+				<text><![CDATA[paciente_edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="760" y="0" width="40" height="15" forecolor="#736343" uuid="83823963-7b51-480d-8ec3-e105e99e7e44"/>
+				<text><![CDATA[paciente_sexo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="098ef040-733b-495f-b43c-d2220d90d172"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="40" height="15" uuid="4470e432-2032-4e41-9e11-d2d640a8d179"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_id_hoja}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="40" y="0" width="40" height="15" uuid="f2874706-4e1c-46b6-841f-c4059a071fcc"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_paciente}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="80" y="0" width="40" height="15" uuid="8db4ffd0-8e54-48d4-9012-e58f2f5f10b0"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_analisis}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="120" y="0" width="40" height="15" uuid="094fbbe6-6cb8-4cad-ace1-056dc883ef21"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_medico}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="160" y="0" width="40" height="15" uuid="2620333d-5f06-4dd8-ac17-43029298398e"/>
+					<textFieldExpression><![CDATA[$F{hoja_analisis_clave}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="200" y="0" width="40" height="15" uuid="567a24d2-34a8-4f04-9044-626cd4303ffa"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="240" y="0" width="40" height="15" uuid="2eb5ab40-61d4-4141-af51-1eeac12c911d"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_area}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="280" y="0" width="40" height="15" uuid="c54f6b97-dfc2-4f7d-985c-7a343729023b"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_categoria}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="320" y="0" width="40" height="15" uuid="e2f7e90d-a217-4763-8e6a-e25790e21e63"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_datos}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="360" y="0" width="40" height="15" uuid="94687a9b-bf10-4b02-9848-30e0f4a0eee1"/>
+					<textFieldExpression><![CDATA[$F{datos_estudio_fecha}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="400" y="0" width="40" height="15" uuid="7fe30b33-cf85-49d3-add0-9a0a3e986f45"/>
+					<textFieldExpression><![CDATA[$F{laboratorio_id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="440" y="0" width="40" height="15" uuid="753781d6-6d88-4190-b896-ecab8e222c94"/>
+					<textFieldExpression><![CDATA[$F{laboratorio_paciente}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="480" y="0" width="40" height="15" uuid="4d982dd0-ed34-41d5-80a5-79981b8438e3"/>
+					<textFieldExpression><![CDATA[$F{laboratorio_tipo_estudio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="520" y="0" width="40" height="15" uuid="83cb7a90-cb25-42a4-833f-06103d19da3d"/>
+					<textFieldExpression><![CDATA[$F{laboratorio_area}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="560" y="0" width="40" height="15" uuid="f346337c-9fb6-4a98-92e0-821fee8dad79"/>
+					<textFieldExpression><![CDATA[$F{laboratorio_fecha}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="600" y="0" width="40" height="15" uuid="e95ce0a1-73a6-4910-8868-faa29381fbc6"/>
+					<textFieldExpression><![CDATA[$F{paciente_dni}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="640" y="0" width="40" height="15" uuid="9cffd062-1cb9-49a9-a731-99d9377344bd"/>
+					<textFieldExpression><![CDATA[$F{paciente_nombre}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="680" y="0" width="40" height="15" uuid="dcf916f9-d953-4815-98ff-562765390347"/>
+					<textFieldExpression><![CDATA[$F{paciente_apellido}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="720" y="0" width="40" height="15" uuid="6f3fc2ab-bb76-423d-9535-b32d5523a08b"/>
+					<textFieldExpression><![CDATA[$F{paciente_edad}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="760" y="0" width="40" height="15" uuid="890d8b7c-9038-4be3-890e-b31d236b2d4e"/>
+					<textFieldExpression><![CDATA[$F{paciente_sexo}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="64" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="558c171c-9ead-47e4-9b1a-48b6ca848238"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="e93dfe92-79b1-476c-9625-c271c70b1282"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="e1986713-fd76-4b0f-8656-63e05af5cc18"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="62c38ef2-93a5-4f29-b569-15e2d01101f7"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="bf71f8d8-2220-49a7-9efd-79079d2e8a07"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

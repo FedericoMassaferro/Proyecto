@@ -1,0 +1,16 @@
+div{
+  display: inline-block;
+}
+h1{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+.paciente{
+  margin-left: 32%;
+  margin-right: 5%;
+}
+img{
+  width: 90%;
+}
